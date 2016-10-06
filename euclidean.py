@@ -2,17 +2,17 @@
 
 import sys
 
-def euclidean_GCD( a, b ):
+def euclideanGCD( a, b ):
     """Calculates the Greatest Common Denominator of two integers using
     the Euclidean algorithm.
     
     Arguments should be integers.
     Returns GCD(a,b)
     """
-    return abs(a) if ( b == 0 ) else euclidean_GCD( b, a%b )
+    return abs(a) if ( b == 0 ) else euclideanGCD( b, a%b )
 
 
-def extended_euclidean( a, b ):
+def extendedEuclidean( a, b ):
     """Calculate the GCD and linear combination of two integers using
     the Extended Euclidean algorithm.
     
@@ -30,9 +30,6 @@ def extended_euclidean( a, b ):
         old_s, s = s, (old_s - quotient*s)
         old_t, t = t, (old_t - quotient*t)
     
-    print("r, old_r = {}, {}".format(r, old_r))
-    print("s, old_s = {}, {}".format(s, old_s))
-    print("t, old_t = {}, {}".format(t, old_t))
     return (old_r, old_s, old_t)
 
 if __name__ == "__main__":
@@ -57,8 +54,8 @@ if __name__ == "__main__":
         exit(1)
     
     # Output the results
-    print("The GCD of a and b is:", euclidean_GCD(a, b))
+    print("The GCD of a and b is:", euclideanGCD(a, b))
     print("The linear combination of GCD(a,b) is: " \
           "{2[0]} = {0}*{2[1]} + {1}*{2[2]}".format( a, b, 
-                                    extended_euclidean(a, b))
+                                    extendedEuclidean(a, b))
          )
