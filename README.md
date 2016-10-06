@@ -22,7 +22,7 @@ by running `chmod +x euclidean.py`.
 
 There are two interfaces to `euclidean.py` when executed in a shell.
 
-The first is passing two integer arguments, e.g. `./euclidean.py 9 12`.
+1. Pass two integer arguments, e.g. `./euclidean.py 9 12`.
 
-The second is the interactive mode outlined in *§2 Expected Outcomes*
-of the project guidelines accessible by passing no arguments.
+2. The interactive mode, outlined in *§2 Expected Outcomes*
+of the project guidelines, accessible by passing no arguments.
