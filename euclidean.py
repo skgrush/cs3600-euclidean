@@ -18,6 +18,9 @@ def extendedEuclidean( a, b ):
     
     Arguments should be integers.
     Returns (r,s,t) such that (r = a*s + b*t)
+    -
+    Based on pseudocode from
+    https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
     """
     
     s, old_s = 0, 1
@@ -31,6 +34,8 @@ def extendedEuclidean( a, b ):
         old_t, t = t, (old_t - quotient*t)
     
     return (old_r, old_s, old_t)
+
+
 
 if __name__ == "__main__":
     
