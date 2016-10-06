@@ -10,10 +10,11 @@ class test_euclideanGCD(unittest.TestCase):
     def test_0(self):
         
         data = [
-            (0,0,  0),
-            (0,1,  1),
-            (1,0,  1),
-            (0,12, 12),
+            #a  b  r
+            (0, 0, 0),
+            (0, 1, 1),
+            (1, 0, 1),
+            (0, 12,12),
             (12,0, 12)
         ]
         
@@ -25,7 +26,8 @@ class test_euclideanGCD(unittest.TestCase):
     def test_1(self):
         
         data = [
-            (1,12, 1),
+            #a  b  r
+            (1, 12,1),
             (12,1, 1)
         ]
         
@@ -37,6 +39,7 @@ class test_euclideanGCD(unittest.TestCase):
     def test_big_factors(self):
         
         data = [
+            # a             b               r
             (1406700,       164115,         23445),
             (164115,        1406700,        23445),
             (55534,         434334,         2),
@@ -55,6 +58,7 @@ class test_euclideanGCD(unittest.TestCase):
     def test_big_primes(self):
         
         data = [
+            # a          b           r
             (2921802413, 20358439,   1),
             (20358439,   2921802413, 1),
             (85796527,   34775062331,1),
@@ -72,6 +76,7 @@ class test_extendedEuclidean(unittest.TestCase):
     def test_gcd(self):
         
         data = [
+            #a          b           r
             (0,         0,          0),
             (0,         1,          1),
             (1,         12,         1),
@@ -88,6 +93,7 @@ class test_extendedEuclidean(unittest.TestCase):
     def test_linearcombos(self):
         
         data = [
+            # a             b
             (0,             0),
             (0,             1),
             (1,             0),
