@@ -1,5 +1,7 @@
 # CS 3600 Project 1 - Euclidean Algorithm
 
+#### Authors: Samuel K. Grush & Cara Strunk
+
 My implementation for Project 1 for *CS 3600 Computer Security*. 
 
 The script contains two functions, `euclideanGCD` and 
