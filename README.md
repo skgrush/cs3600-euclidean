@@ -1,8 +1,8 @@
-# CS 3600 Project 1 - Euclidean Algorithm
+# CS 3600 Project 2 - Euclidean Algorithm
 
-#### Authors: Samuel K. Grush & Cara Strunk
+#### Authors: Samuel K. Grush
 
-My implementation for Project 1 for *CS 3600 Computer Security*. 
+My implementation for Project 2 for *CS 3600 Computer Security*. 
 
 The script contains two functions, `euclideanGCD` and 
 `extendedEuclidean`, which calculate the greatest common denominator
@@ -20,11 +20,13 @@ by running `chmod +x euclidean.py`.
 
 ## Usage
 
-    ./euclidean.py [a b]
+    ./euclidean.py [a b | INPUT OUTPUT]
 
-There are two interfaces to `euclidean.py` when executed in a shell.
+There are three interfaces to `euclidean.py` when executed in a shell.
 
 1. Pass two integer arguments, e.g. `./euclidean.py 9 12`.
 
-2. The interactive mode, outlined in *§2 Expected Outcomes*
+2. Pass two file paths, e.g. `./euclidean.py input.txt output.txt`.
+
+3. The interactive mode, outlined in *§2 Expected Outcomes*
 of the project guidelines, accessible by passing no arguments.
