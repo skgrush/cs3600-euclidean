@@ -15,6 +15,9 @@ def euclideanGCD( a, b ):
     
     Arguments should be integers.
     Returns GCD(a,b)
+    
+    Note:
+        This function will likely hit the recursion limit for big numbers.
     """
     return abs(a) if ( b == 0 ) else euclideanGCD( b, a%b )
 
@@ -110,7 +113,6 @@ if __name__ == "__main__":
     
     else:
         # Output the results
-        print("The GCD of a and b is:", euclideanGCD(a, b))
         print("The linear combination of GCD(a,b) is: " \
               "{2[0]} = {0}*{2[1]} + {1}*{2[2]}".format( a, b, 
                                         extendedEuclidean(a, b))
