@@ -1,8 +1,8 @@
-# CS 3600 Project 1 - Euclidean Algorithm
+# CS 3600 Project 2 - Euclidean Algorithm
 
-#### Authors: Samuel K. Grush & Cara Strunk
+#### Authors: Samuel K. Grush
 
-My implementation for Project 1 for *CS 3600 Computer Security*. 
+My implementation for Project 2 for *CS 3600 Computer Security*. 
 
 The script contains two functions, `euclideanGCD` and 
 `extendedEuclidean`, which calculate the greatest common denominator
