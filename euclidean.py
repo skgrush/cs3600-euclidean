@@ -106,14 +106,15 @@ if __name__ == "__main__":
         exit(1)
     
     
+    gcdAndCoeffs = extendedEuclidean(a, b)
+    
+    
     if outputfile:
-        
-        gcd_and_coefficients = extendedEuclidean(a, b)
         
         # Write the results to a file
         with open(outputfile, 'w') as ofl:
             
-            for i in gcd_and_coefficients:
+            for i in gcdAndCoeffs:
                 ofl.write( str(abs(i)) )
                 ofl.write( '\n' )
         
@@ -122,6 +123,5 @@ if __name__ == "__main__":
     else:
         # Output the results
         print("The linear combination of GCD(a,b) is: " \
-              "{2[0]} = {0}*{2[1]} + {1}*{2[2]}".format( a, b, 
-                                        extendedEuclidean(a, b))
+              "{2[0]} = {0}*{2[1]} + {1}*{2[2]}".format( a, b, gcdAndCoeffs )
              )
