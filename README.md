@@ -20,11 +20,13 @@ by running `chmod +x euclidean.py`.
 
 ## Usage
 
-    ./euclidean.py [a b]
+    ./euclidean.py [a b | INPUT OUTPUT]
 
-There are two interfaces to `euclidean.py` when executed in a shell.
+There are three interfaces to `euclidean.py` when executed in a shell.
 
 1. Pass two integer arguments, e.g. `./euclidean.py 9 12`.
 
-2. The interactive mode, outlined in *§2 Expected Outcomes*
+2. Pass two file paths, e.g. `./euclidean.py input.txt output.txt`.
+
+3. The interactive mode, outlined in *§2 Expected Outcomes*
 of the project guidelines, accessible by passing no arguments.
