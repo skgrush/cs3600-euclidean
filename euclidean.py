@@ -46,6 +46,29 @@ def extendedEuclidean( a, b ):
     return (old_r, old_s, old_t)
 
 
+def readFromFile(inputfile):
+    """Read two lines from path *inputfile* and return them.
+    
+    Exits on failure.
+    """
+    a,b = None,None
+    
+    try:
+        with open(inputfile, 'r') as ifl:
+            a = ifl.readline().strip()
+            b = ifl.readline().strip()
+        
+    except Exception as err:
+        print(type(err).__name__, err)
+        exit(-1)
+    
+    if not a or not b:
+        print("\nERROR: Not enough arguments in", repr(inputfile))
+        exit(1)
+    
+    return a,b
+
+
 
 if __name__ == "__main__":
     
@@ -57,13 +80,11 @@ if __name__ == "__main__":
     inputfile, outputfile = '',''
     a, b = 0, 0
     
-    # if there are two args and they're ints, use them for a and b
+    
     if len(sys.argv) == 3 and sys.argv[1].isdigit() and sys.argv[2].isdigit():
         a, b = sys.argv[1:3]
     
     else:
-        # if there are two args, assume they're filenames
-        # else get them from input
         if len(sys.argv) == 3:
             inputfile, outputfile = sys.argv[1:3]
         
@@ -74,22 +95,9 @@ if __name__ == "__main__":
                               "the GCD of a and b, and the linear " \
                               "combination of GCD(a,b): ")
         
-        # read from file
-        try:
-            with open(inputfile, 'r') as ifl:
-                a = ifl.readline().strip()
-                b = ifl.readline().strip()
-                    
-        except Exception as err:
-            print(type(err),err)
-            exit(-1)
-        
-        if not a or not b:
-            print("\nERROR: Not enough arguments in", repr(inputfile))
-            exit(1)
-        
+        a, b = readFromFile(inputfile)
     
-    # Integer-ize a and b, watch for exceptions
+    
     try:
         a, b = int(a), int(b)
     
